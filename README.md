@@ -24,7 +24,7 @@ Builds the app for production to the `build` folder.<br>
     (react16.x+react-router4.x+redux+redux-thunk+redux-actions)
 
 ## `关于store的一些提示`
-    使用 [redux-actions](https://segmentfault.com/a/1190000013026224)
+    使用 redux-actions [https://segmentfault.com/a/1190000013026224](https://segmentfault.com/a/1190000013026224)
     当我们的在开发大型应用的时候，对于大量的action，我们的reducer需要些大量的swich来对action.type进行判断。
     redux-actions可以简化这一烦琐的过程，它可以是actionCreator，也可以用来生成reducer，其作用都是用来简化action、reducer。
     主要函数有 [createAction、handleActions、combineActions。][https://redux-actions.js.org/introduction]
