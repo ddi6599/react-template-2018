@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect, Link, withRouter } from 'react-router-dom'
 import connect from 'connect'
+import * as asyncFuns from "../../reducers/asyncExample";
 @connect
 @withRouter
 class Personal extends Component {
@@ -16,6 +17,10 @@ class Personal extends Component {
             hideLoading()
         },2000)
     }
+    textAsyncFun = () => {
+    const { testAsyncFunction } = this.props
+    testAsyncFunction()
+    }
     render () {
         return (
             <div>
@@ -30,6 +35,8 @@ class Personal extends Component {
                         <Redirect from={`${this.props.match.url}`} to={`${this.props.match.url}/1`}></Redirect>
                     </Switch>
                 </Route>
+              <div>async初始值：{this.props.state.asyncFuns.info}</div>
+              <div onClick={this.textAsyncFun}>click me to text async redux-action</div>
             </div>
         )
     }
