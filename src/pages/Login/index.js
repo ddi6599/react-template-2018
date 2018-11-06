@@ -8,7 +8,7 @@ class Login extends Component {
             history.push('/')
         }
     }
-    login () {
+    login = () => {
         const { history } = this.props
         window.localStorage.setItem('login_token','_userName_liMing')
         history.push('/')
@@ -17,7 +17,7 @@ class Login extends Component {
         return (
             <div>
                 <h1>Login Page</h1>
-                <div onClick={this.login.bind(this)}>click me to login</div>
+                <div onClick={this.login}>click me to login</div>
                 <div><Link to='/'>To Index</Link></div>
             </div>
         )

@@ -8,7 +8,7 @@ class Personal extends Component {
     componentDidMount () {
         console.log(this.props)
     }
-    loginOut () {
+    loginOut = () => {
         const { history, showLoading, hideLoading } = this.props
         window.localStorage.removeItem('login_token')
         showLoading()
@@ -25,7 +25,7 @@ class Personal extends Component {
         return (
             <div>
                 <h1>Personal Page</h1>
-                <div onClick={this.loginOut.bind(this)}>click me to loginOut</div>
+                <div onClick={this.loginOut}>click me to loginOut</div>
                 <div><Link to={`${this.props.match.url}/1`}>To Personal Child1</Link></div>
                 <div><Link to={`${this.props.match.url}/2`}>To Personal Child2</Link></div>
                 <Route>
