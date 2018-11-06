@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect, Link, withRouter } from 'react-router-dom'
 import connect from 'connect'
-import * as asyncFuns from "../../reducers/asyncExample";
 @connect
 @withRouter
 class Personal extends Component {
